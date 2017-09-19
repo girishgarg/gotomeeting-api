@@ -33,11 +33,16 @@ public class Gotomeeting {
 		Desktop.getDesktop().browse(new URL(authUrl).toURI());
 	}
 	
-	
+	/*WebClient webClient = new WebClient();
+	webClient.getOptions().setJavaScriptEnabled(true);
+    webClient.getOptions().setRedirectEnabled(true);
+    webClient.getOptions().setThrowExceptionOnScriptError(false);
+    webClient.getOptions().setCssEnabled(true); 
 	//HtmlPage page = webClient.getPage(authUrl);
-	
+    
+	HtmlPage currentPage = (HtmlPage) webClient.getCurrentWindow().getEnclosedPage();
 	//HtmlPage page; 
-	URL url = page.getUrl();
+*/	URL url = currentPage.getUrl();
 	String responseKey = oauth2Api.getResponseKey(url);
 	LoginResponse response = oauth2Api.getAccessTokenResponse(consumerKey, responseKey);
 	String accessToken = response.getAccessToken(); 
