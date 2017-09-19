@@ -23,8 +23,8 @@ public class Directlogin {
 		
 		HttpClient client = new DefaultHttpClient();
 		StringBuilder   builder = new StringBuilder();
-		String userid = "girishgarg258@gmail.com" ;
-		String password = "girish@123";
+		String userid = "enter mail" ;
+		String password = "enterpassword";
 		  HttpGet request = new HttpGet("https://api.getgo.com/oauth/access_token?grant_type=password&user_id="+userid+"&password="+password+"&client_id=NgzPn48YEARvjKgdCtFNNbcjpnX1yK6z");
 		 
 		  HttpResponse response = client.execute(request);
@@ -39,7 +39,7 @@ public class Directlogin {
 		 // System.out.println(name);
 		  
 		  //for fetching data
-		  HttpClient client1 = new DefaultHttpClient();
+		  /*HttpClient client1 = new DefaultHttpClient();
 		  HttpGet request1 = new HttpGet("https://api.getgo.com/G2M/rest/upcomingMeetings");
 		  request1.addHeader("Authorization", "Bearer "+name);
 		  HttpResponse response1 = client1.execute(request1);
@@ -48,7 +48,7 @@ public class Directlogin {
 		  while ((line1 = rd1.readLine()) != null) {
 		    System.out.println(line1);
 		    
-		  }
+		  }*/
 		  
 		  //for creating meeting and gotolink
 		  HttpClient client11 = new DefaultHttpClient();
